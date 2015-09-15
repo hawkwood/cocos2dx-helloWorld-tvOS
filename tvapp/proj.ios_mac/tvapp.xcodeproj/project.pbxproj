@@ -60,6 +60,8 @@
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
+		9ED42A821BA8C57B00C25D7A /* TVMLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED42A801BA8C57B00C25D7A /* TVMLKit.framework */; };
+		9ED42A831BA8C57B00C25D7A /* TVServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED42A811BA8C57B00C25D7A /* TVServices.framework */; };
 		9EE108761BA8A43600078FAA /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		9EE108771BA8A45800078FAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
 		9EE108781BA8A46000078FAA /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FF17EB989F00D1A890 /* RootViewController.mm */; };
@@ -192,6 +194,8 @@
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9ED42A801BA8C57B00C25D7A /* TVMLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVMLKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/System/Library/Frameworks/TVMLKit.framework; sourceTree = DEVELOPER_DIR; };
+		9ED42A811BA8C57B00C25D7A /* TVServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVServices.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/System/Library/Frameworks/TVServices.framework; sourceTree = DEVELOPER_DIR; };
 		9EE108791BA8A72800078FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = tv/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		9EE1087A1BA8A72800078FAA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = tv/Info.plist; sourceTree = SOURCE_ROOT; };
 		9EF9A8BA1BA898F000102D0A /* tvapp-tv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tvapp-tv.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,6 +265,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ED42A821BA8C57B00C25D7A /* TVMLKit.framework in Frameworks */,
+				9ED42A831BA8C57B00C25D7A /* TVServices.framework in Frameworks */,
 				9EF9A8E71BA89A8200102D0A /* libcocos2d tvOS.a in Frameworks */,
 				9EF9A8E61BA89A7700102D0A /* libiconv.tbd in Frameworks */,
 				9EF9A8E41BA89A6900102D0A /* Security.framework in Frameworks */,
@@ -332,6 +338,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9ED42A801BA8C57B00C25D7A /* TVMLKit.framework */,
+				9ED42A811BA8C57B00C25D7A /* TVServices.framework */,
 				9EF9A8E51BA89A7700102D0A /* libiconv.tbd */,
 				9EF9A8E31BA89A6900102D0A /* Security.framework */,
 				9EF9A8E11BA89A6100102D0A /* Foundation.framework */,
