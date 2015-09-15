@@ -112,7 +112,8 @@ public:
     enum class PlatformType {
         ALL = 0,
         IOS,
-        MAC
+        MAC,
+        TVOS
     };
     
     enum class TargetType {

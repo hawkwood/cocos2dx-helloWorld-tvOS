@@ -25,7 +25,7 @@
 
 #include "CCController.h"
 #include "platform/CCPlatformConfig.h"
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS) || (CC_TARGET_PLATFORM == CC_PLATFORM_TVOS)
 
 #include "ccMacros.h"
 #include "CCEventDispatcher.h"
@@ -315,4 +315,4 @@ void Controller::receiveExternalKeyEvent(int externalKeyCode,bool receive)
 
 NS_CC_END
 
-#endif // #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+#endif // #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS) || (CC_TARGET_PLATFORM == CC_PLATFORM_TVOS)

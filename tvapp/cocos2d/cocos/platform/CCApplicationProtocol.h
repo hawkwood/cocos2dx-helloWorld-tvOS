@@ -51,6 +51,7 @@ public:
         OS_MAC,/** Mac*/
         OS_ANDROID,/** Android */
         OS_IPHONE,/** Iphone */
+        OS_APPLETV,/** AppleTV **/
         OS_IPAD,/** Ipad */
         OS_BLACKBERRY,/** BLACKBERRY */
         OS_NACL,/** Nacl */

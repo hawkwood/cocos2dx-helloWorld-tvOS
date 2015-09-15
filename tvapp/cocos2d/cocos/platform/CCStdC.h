@@ -32,6 +32,8 @@ THE SOFTWARE.
 #include "platform/mac/CCStdC-mac.h"
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 #include "platform/ios/CCStdC-ios.h"
+#elif CC_TARGET_PLATFORM == CC_PLATFORM_TVOS
+#include "platform/tvos/CCStdC-tvos.h"
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 #include "platform/android/CCStdC-android.h"
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_WIN32

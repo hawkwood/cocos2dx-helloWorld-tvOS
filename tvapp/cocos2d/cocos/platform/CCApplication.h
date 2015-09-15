@@ -33,6 +33,8 @@ THE SOFTWARE.
 #include "platform/mac/CCApplication-mac.h"
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 #include "platform/ios/CCApplication-ios.h"
+#elif CC_TARGET_PLATFORM == CC_PLATFORM_TVOS
+#include "platform/tvos/CCApplication-tvos.h"
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 #include "platform/android/CCApplication-android.h"
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_WIN32

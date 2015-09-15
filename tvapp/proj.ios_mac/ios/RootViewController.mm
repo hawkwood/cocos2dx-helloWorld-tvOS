@@ -25,8 +25,11 @@
 
 #import "RootViewController.h"
 #import "cocos2d.h"
+#if CC_TARGET_PLATFORM == CC_PLATFORM_TVOS
+#import "platform/tvos/CCEAGLView-tvos.h"
+#else
 #import "platform/ios/CCEAGLView-ios.h"
-
+#endif
 @implementation RootViewController
 
 /*

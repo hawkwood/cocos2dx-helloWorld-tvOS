@@ -204,6 +204,13 @@ THE SOFTWARE.
     #include "platform/ios/CCStdC-ios.h"
 #endif // CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_TVOS)
+#include "platform/tvos/CCApplication-tvos.h"
+#include "platform/tvos/CCGLViewImpl-tvos.h"
+#include "platform/tvos/CCGL-tvos.h"
+#include "platform/tvos/CCStdC-tvos.h"
+#endif // CC_TARGET_PLATFORM == CC_PLATFORM_TVOS
+
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     #include "platform/android/CCApplication-android.h"
     #include "platform/android/CCGLViewImpl-android.h"

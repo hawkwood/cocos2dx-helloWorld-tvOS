@@ -36,7 +36,7 @@ extern "C"
 {
     // To resolve link error when building 32bits with Xcode 6.
     // More information please refer to the discussion in https://github.com/cocos2d/cocos2d-x/pull/6986
-#if defined (__unix) || (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+#if defined (__unix) || (CC_TARGET_PLATFORM == CC_PLATFORM_IOS) || (CC_TARGET_PLATFORM == CC_PLATFORM_TVOS)
 #ifndef __ENABLE_COMPATIBILITY_WITH_UNIX_2003__
 #define __ENABLE_COMPATIBILITY_WITH_UNIX_2003__
 #include <stdio.h>
@@ -2179,7 +2179,7 @@ bool Image::initWithRawData(const unsigned char * data, ssize_t dataLen, int wid
 }
 
 
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_IOS)
+#if (CC_TARGET_PLATFORM != CC_PLATFORM_IOS) && (CC_TARGET_PLATFORM != CC_PLATFORM_TVOS)
 bool Image::saveToFile(const std::string& filename, bool isToRGB)
 {
     //only support for Texture2D::PixelFormat::RGB888 or Texture2D::PixelFormat::RGBA8888 uncompressed data

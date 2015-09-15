@@ -1095,7 +1095,7 @@ void Console::addClient()
          *
          * The default behaviour for this signal is to end the process.So we make the process ignore SIGPIPE.
          */
-#if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
+#if CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_TVOS
         int set = 1;
         setsockopt(fd, SOL_SOCKET, SO_NOSIGPIPE, (void*)&set, sizeof(int));
 #endif

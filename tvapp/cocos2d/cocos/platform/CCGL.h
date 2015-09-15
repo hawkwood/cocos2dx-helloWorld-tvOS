@@ -33,6 +33,8 @@ THE SOFTWARE.
 #include "platform/mac/CCGL-mac.h"
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 #include "platform/ios/CCGL-ios.h"
+#elif CC_TARGET_PLATFORM == CC_PLATFORM_TVOS
+#include "platform/tvos/CCGL-tvos.h"
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 #include "platform/android/CCGL-android.h"
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_WIN32

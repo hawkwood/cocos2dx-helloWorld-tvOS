@@ -23,7 +23,11 @@
  ****************************************************************************/
 
 #import "AppController.h"
+#if CC_TARGET_PLATFORM == CC_PLATFORM_TVOS
+#import "platform/tvos/CCEAGLView-tvos.h"
+#else
 #import "platform/ios/CCEAGLView-ios.h"
+#endif
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
@@ -57,11 +61,15 @@ static AppDelegate s_sharedApplication;
                                      numberOfSamples: 0 ];
     
     // Enable or disable multiple touches
+#if CC_TARGET_PLATFORM != CC_PLATFORM_TVOS
     [eaglView setMultipleTouchEnabled:NO];
+#endif
 
     // Use RootViewController manage CCEAGLView 
     _viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
+#if CC_TARGET_PLATFORM != CC_PLATFORM_TVOS
     _viewController.wantsFullScreenLayout = YES;
+#endif
     _viewController.view = eaglView;
 
     // Set RootViewController to window
@@ -78,7 +86,9 @@ static AppDelegate s_sharedApplication;
 
     [window makeKeyAndVisible];
 
+#if CC_TARGET_PLATFORM != CC_PLATFORM_TVOS
     [[UIApplication sharedApplication] setStatusBarHidden:true];
+#endif
 
     // IMPORTANT: Setting the GLView should be done after creating the RootViewController
     cocos2d::GLView *glview = cocos2d::GLViewImpl::createWithEAGLView(eaglView);

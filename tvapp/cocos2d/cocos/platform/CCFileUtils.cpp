@@ -45,7 +45,7 @@ NS_CC_BEGIN
 
 // Implement DictMaker
 
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_IOS) && (CC_TARGET_PLATFORM != CC_PLATFORM_MAC)
+#if (CC_TARGET_PLATFORM != CC_PLATFORM_IOS) && (CC_TARGET_PLATFORM != CC_PLATFORM_MAC) && (CC_TARGET_PLATFORM != CC_PLATFORM_TVOS)
 
 typedef enum
 {
@@ -1189,6 +1189,10 @@ bool FileUtils::removeDirectory(const std::string& path)
         return false;
     }
 
+#if CC_TARGET_PLATFORM == CC_PLATFORM_TVOS
+    CCLOGERROR("Fail to remove directory, not YET supported on AppleTV");
+    return false;
+#else
     std::string command = "rm -r ";
     // Path may include space.
     command += "\"" + path + "\"";
@@ -1196,6 +1200,7 @@ bool FileUtils::removeDirectory(const std::string& path)
         return true;
     else
         return false;
+#endif
 }
 
 bool FileUtils::removeFile(const std::string &path)

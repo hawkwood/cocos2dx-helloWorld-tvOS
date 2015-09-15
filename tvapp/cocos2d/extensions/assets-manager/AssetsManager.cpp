@@ -680,6 +680,8 @@ void AssetsManager::destroyStoragePath()
     // Path may include space.
     command += "\"" + _storagePath + "\"";
     system(command.c_str());
+#elif CC_TARGET_PLATFORM == CC_PLATFORM_TVOS
+    CCLOGERROR("Fail to remove directory, not YET supported on AppleTV");
 #else
     string command = "rm -r ";
     // Path may include space.
